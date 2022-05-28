@@ -1,0 +1,8 @@
+.cardContainer {
+  display: flex;
+  
+}
+
+.cards{
+    padding: 20px;
+}

@@ -1,0 +1,27 @@
+.neon {
+    color: #fff;
+    text-shadow:
+      0 0 5px #EBEAF1,
+      0 0 10px #EBEAF1,
+      0 0 20px #EBEAF1,
+      0 0 40px #EBEAF1,
+      0 0 80px #EBEAF1,
+      0 0 90px #EBEAF1,
+      0 0 100px #EBEAF1,
+      0 0 150px #EBEAF1;
+  }
+  
+  
+
+  .containerNeon {
+    margin: 0 auto;
+    font-size: calc(0.5vw + 0.5vh + 0.75vmin);
+  }
+
+  
+
+  p {
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
