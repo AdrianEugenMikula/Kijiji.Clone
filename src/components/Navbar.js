@@ -48,7 +48,9 @@ const Navbar = () => {
         <Link href="#">Register</Link>
         <span>or</span>
         <Link href="#">Sign In</Link>
-        <button>Post Ad</button>
+        <Link href="/post">
+          <button>Post Ad</button>
+        </Link>
       </div>
     </nav>
   );
