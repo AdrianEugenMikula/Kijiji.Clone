@@ -2,7 +2,7 @@ import "./NavMenu.css";
 
 const NavMenu = () => {
   return (
-    <nav className="">
+    <nav className="navigationMenu">
       <div className="navdropdown">
         <button className="navdropbtn">Cars & Vehicles</button>
         <div className="navdropdown-content">

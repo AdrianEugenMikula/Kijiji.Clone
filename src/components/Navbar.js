@@ -1,18 +1,23 @@
 import React from "react";
-import logo from "../logo.png";
-import { TextField } from "@mui/material";
+import logo from "../logo1.png";
+import { TextField,InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 import "./Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
+import Button from "@mui/material/Button";
+import { shadows } from "@mui/system";
+import { CenterFocusStrong } from "@mui/icons-material";
 
 const Navbar = () => {
   return (
     <nav className="flex-container">
-      <div className="logo-container">
-        <img src={logo} alt="Logo" align="left" />
-      </div>
+      <Link href="/">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" />
+        </div>
+      </Link>
       <div></div>
       <div className="navitems">
         <Box
@@ -21,9 +26,20 @@ const Navbar = () => {
             maxWidth: "100%",
           }}
         >
-          <TextField fullWidth label="Search for anything..." id="fullWidth" />
+          <TextField fullWidth label="Search for anything..." id="fullWidth" 
+             InputProps={{
+              endAdornment: (
+                <InputAdornment>
+                  <IconButton>
+                    <SearchIcon />
+                  </IconButton>
+                </InputAdornment>
+              )
+            }}
+          />
         </Box>
       </div>
+     
 
       <div className="navitems">
         <div className="dropdown">
@@ -34,23 +50,23 @@ const Navbar = () => {
             <a href="#">Jobs</a>
           </div>
         </div>
-        <IconButton
-          color="secondary"
-          aria-label="Search"
-          size="medium"
-          component="span"
-        >
-          <SearchIcon />
-        </IconButton>
       </div>
 
       <div className="flex-container-2">
         <Link href="#">Register</Link>
         <span>or</span>
         <Link href="#">Sign In</Link>
-        <Link href="/post">
-          <button>Post Ad</button>
-        </Link>
+        <Box
+        >
+          <button className="btnPostAd">
+            <Link
+              href="/post"
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              Post Ad
+            </Link>
+          </button>
+        </Box>
       </div>
     </nav>
   );

@@ -5,13 +5,14 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PostAd from "./components/CardComponent/PostAd";
 
+
 function App() {
   return (
     <Router>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path= "/post" element={<PostAd/>} />
+        <Route path="/post" element={<PostAd/>} />
       </Routes>
       <Footer/>
     </Router>

@@ -18,8 +18,8 @@
       rgba(0, 0, 0, var(--bg-filter-opacity))
     ),
     var(--bg-img);
-  height: 7em;
-  width: 11em;
+  height: 6em;
+  width: 9em;
   font-size: 1.4em;
   color: white;
   border-radius: 1em;
@@ -131,6 +131,7 @@
 @media screen and (max-width: 900px) {
   .cards-wrapper {
     grid-template-columns: 1fr;
+    margin-left: 8px;
   }
   .info {
     justify-content: center;

@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import "./RecommendationsCarousel.css"
 
 const RecommendationsCarousel = () => {
   const [products, setProducts] = useState([]);
@@ -25,13 +26,14 @@ const RecommendationsCarousel = () => {
       {products.map((product) => {
         return (
           <div className='cards'>
-            <Card sx={{ maxWidth: 160 }}>
+            <Card sx={{ width:176}}>
               <CardActionArea>
-                <CardMedia component='img' height='' image={product.Image} />
+                <CardMedia component='img' height='' image={product.Image}  sx={{height:112}}/>
                 <CardContent>
                   <Typography gutterBottom variant='h7' component='div'>
                     <b> {product.name}</b>
-                    <b> ${product.Price}</b>
+                    <br/>
+                    <b style={{color:"limegreen"}}> ${product.Price}</b>
                   </Typography>
                 </CardContent>
               </CardActionArea>

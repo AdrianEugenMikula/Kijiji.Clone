@@ -1,19 +1,19 @@
 .footer {
-  background-color: midnightblue;
+  background-color: #3E4153;
   padding: 30px 0px;
   padding-bottom: 0px;
-  margin: 20px;
+  margin: 0px;
   font-family: "Play", sans-serif;
   font-size: x-large;
   text-align: center;
-  opacity: 0.8;
-  border-radius: 10px;
+  overflow: hidden;
 }
 
 .footer .row {
   width: 100%;
-  margin: 1% 0%;
-  padding: 0.6% 0%;
+  height: 100%;
+  margin: 0% 0%;
+  padding: 2.6% 0%;
   color: #fff;
   font-size: 0.8em;
 }

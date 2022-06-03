@@ -38,14 +38,20 @@ const Footer = () => {
             <li>
               <a href="#">Career</a>
             </li>
-            
           </ul>
           <div class="containerNeon">
-  <p class="neon"><br/><br/><br/>DISCLAIMER <br/>
-         This is a personal project and has no affiliations with the real www.kijiji.ca <br/>
-         It has been created as a final project for college and it is not a functional website.</p>
-</div>
-        </div>   
+            <p class="neon">
+              <br />
+              <br />
+              <br />
+              DISCLAIMER <br />
+              This is a personal project and has no affiliations with the real
+              www.kijiji.ca <br />
+              It has been created as a final project for college and it is not a
+              functional website.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );

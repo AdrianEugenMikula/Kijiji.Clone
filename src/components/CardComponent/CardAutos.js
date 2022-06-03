@@ -10,7 +10,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/kijiji-autos-en-2x.f8da4482.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/kijiji-autos-en-2x.f8da4482.webp)`, width:'200px', height:'120px',
             }}
           >
           </a>
@@ -20,7 +20,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/cars.e83b5592.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/cars.e83b5592.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -35,7 +35,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/classic-cars.ba397828.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/classic-cars.ba397828.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -50,7 +50,7 @@ const CardAutos = () => {
             className="card"
             href="https://codetheweb.blog/2017/10/06/html-syntax/"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/rvs.32d39187.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/rvs.32d39187.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -65,7 +65,7 @@ const CardAutos = () => {
             className="card"
             href="https://codetheweb.blog/2017/10/06/html-syntax/"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/boats.527789ba.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/boats.527789ba.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -80,7 +80,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/motorcycles.6c1e577f.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/motorcycles.6c1e577f.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -95,7 +95,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/auto-parts.2afd3e29.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/auto-parts.2afd3e29.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>
@@ -110,7 +110,7 @@ const CardAutos = () => {
             className="card"
             href="#"
             style={{
-              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/heavy-equipment.07c8a105.webp)`,
+              backgroundImage: `url(https://ca.classistatic.com/service-static/frontend-service/heavy-equipment.07c8a105.webp)`, width:'200px', height:'120px',
             }}
           >
             <div>

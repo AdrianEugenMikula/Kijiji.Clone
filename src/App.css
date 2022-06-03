@@ -1,7 +1,6 @@
-body{
-    
-    font-family:Larsseit,Arial,sans-serif; 
-    margin:  0 0 80px;
-    padding: 0 0 40px;
+body {
+  font-family: Larsseit, Arial, sans-serif;
+  border-top: 5px #000066 solid;
+  width: 100%;
+  margin: 0;
 }
-

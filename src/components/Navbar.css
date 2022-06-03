@@ -1,17 +1,20 @@
 .flex-container {
   display: flex;
-  margin-top: 4px;
-  padding: 10px;
+  margin-left: 0;
   background-color: white;
+  align-items: center;
+  justify-content: center;
 }
 
-.navitems{
-  margin-top: 4rem ;
+.navitems {
+  margin-top: 1.4rem;
 }
 
-.logo-container > img{
-     width: 250px;
-     height: 150px;
+.logo-container > img {
+  width: 275px;
+  height: 150px;
+  margin-top: 0.6rem;
+  padding-bottom: 20px;
 }
 
 .dropbtn {
@@ -47,14 +50,8 @@
 .dropdown-content a:hover {
   background-color: #e5e6e9;
   color: #fff;
-  text-shadow:
-    0 0 5px #373373,
-    0 0 10px #373373,
-    0 0 20px #373373,
-    0 0 40px #373373,
-    0 0 80px #373373,
-    0 0 90px #373373,
-    0 0 100px #373373,
+  text-shadow: 0 0 5px #373373, 0 0 10px #373373, 0 0 20px #373373,
+    0 0 40px #373373, 0 0 80px #373373, 0 0 90px #373373, 0 0 100px #373373,
     0 0 150px #373373;
 }
 
@@ -62,32 +59,153 @@
   display: block;
 }
 
-.flex-container-2{
-  margin-left: 10rem;
+.flex-container-2 {
+  margin-left: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
 }
 
 .flex-container-2 > a {
-  display: inline-flex;
   align-items: center;
   text-decoration: none;
   padding: 10px;
-  margin-top: 4.5rem;
-  margin-left: 10px;
-  color: #2681db;
-  font-size: 20px;
+  margin-top: 0rem;
+  margin-left: 5px;
+
+  font-size: 17px;
 }
 
-.flex-container-2 > button {
-  background-color: #4b4881;
-  color: #fff;
-  border: none;
-  padding: 15px;
-  border-radius: 5px;
-  margin-left: 10px;
-  font-size: 20px;
+.btnPostAd {
+  background-color: #4933ff;
+  width: 80px;
+  height: 40px;
+  font-size: large;
+  border-color: #2a2173;
+  border-radius: 0.3em;
+  text-decoration: none;
+  margin-left: 1px;
+  margin-top: 2px;
+  text-shadow: 0 0 0, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
+    0 0 100px #fff, 0 0 200px #fff, 0 0 300px #fff, 0 0 500px #fff,
+    0 0 1000px #fff;
+  animation: animate 8s infinite alternate;
 }
 
-.extraPadding {
-  padding: 10px;
-  margin-right: 20px;
+@keyframes animate {
+  40% {
+    opacity: 0.5;
+    text-shadow: 0 0 0, transparent, 0 0 10px #373373, 0 0 20px #373373,
+      0 0 40px #373373, 0 0 100px #373373, 0 0 200px #373373, 0 0 300px #373373,
+      0 0 500px #373373, 0 0 1000px #373373;
+  }
+  42% {
+    opacity: 0.5;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ebeaf1, 0 0 20px #ebeaf1,
+      0 0 40px #ebeaf1, 0 0 100px #ebeaf1, 0 0 200px #ebeaf1, 0 0 300px #ebeaf1,
+      0 0 500px #ebeaf1, 0 0 1000px #ebeaf1;
+  }
+  43% {
+    opacity: 0.5;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ebeaf1, 0 0 20px #ebeaf1,
+      0 0 40px #ebeaf1, 0 0 100px #ebeaf1, 0 0 200px #ebeaf1, 0 0 300px #ebeaf1,
+      0 0 500px #ebeaf1, 0 0 1000px #ebeaf1;
+  }
+  45% {
+    opacity: 0.5;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ebeaf1, 0 0 20px #ebeaf1,
+      0 0 40px #ebeaf1, 0 0 100px #ebeaf1, 0 0 200px #ebeaf1, 0 0 300px #ebeaf1,
+      0 0 500px #ebeaf1, 0 0 1000px #ebeaf1;
+  }
+  46% {
+    opacity: 0.5;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ebeaf1, 0 0 20px #ebeaf1,
+      0 0 40px #ebeaf1, 0 0 100px #ebeaf1, 0 0 200px #ebeaf1, 0 0 300px #ebeaf1,
+      0 0 500px #ebeaf1, 0 0 1000px #ebeaf1;
+  }
+}
+
+.btnPostAd a:hover {
+  width: 80px;
+  height: 40px;
+  color: white;
+  font-size: large;
+  font-style: bold;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
+    0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+  border-color: #fff;
+  border-radius: 0.4em;
+}
+
+@media (max-width: 900px) {
+  .logo-container {
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-container > img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .flex-container {
+    display: block;
+    margin-left: 0;
+    background-color: white;
+  }
+
+  .btnPostAd {
+    animation-play-state: paused;
+    text-shadow: none;
+  }
+
+  .btnPostAd:hover {
+    animation-play-state: paused;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo-container {
+    align-items: center;
+  }
+  .logo-container > img {
+    margin-top: 50px;
+    width: 250px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .navitems{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+  .flex-container {
+    display: block;
+    background-color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .btnPostAd {
+    animation-play-state: paused;
+    text-shadow: none;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .btnPostAd:hover {
+    animation-play-state: paused;
+    text-shadow: none;
+  }
+
+  .flex-container-2{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+  }
+
 }
