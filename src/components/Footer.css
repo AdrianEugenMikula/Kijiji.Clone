@@ -16,6 +16,7 @@
   padding: 2.6% 0%;
   color: #fff;
   font-size: 0.8em;
+  text-align: center;
 }
 
 .footer .row a {
@@ -40,11 +41,14 @@
 
 .footer .row ul {
   width: 100%;
+
+ 
 }
 
 .footer .row ul li {
   display: inline-block;
   margin: 0px 30px;
+  
 }
 
 .footer .row a i {
@@ -65,6 +69,28 @@
   .footer .row a i {
     margin: 0% 3%;
     
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 40px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+    
+  }
+
+  .footer .row a:hover {
+    color: #fff;
+    text-shadow: none;
   }
 }
 

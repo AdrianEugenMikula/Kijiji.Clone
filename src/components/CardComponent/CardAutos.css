@@ -140,6 +140,13 @@
     margin-left: 0;
     text-align: center;
   }
+  .card p {
+    font-size: 15px;
+    font-weight: none;
+    line-height: none;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 500px) {

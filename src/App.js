@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PostAd from "./components/CardComponent/PostAd";
+import Register from "./components/Register";
+import Login from './components/Login';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/post" element={<PostAd/>} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
       <Footer/>
     </Router>

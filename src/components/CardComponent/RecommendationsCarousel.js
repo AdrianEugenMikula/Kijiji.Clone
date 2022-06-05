@@ -26,9 +26,9 @@ const RecommendationsCarousel = () => {
       {products.map((product) => {
         return (
           <div className='cards'>
-            <Card sx={{ width:176}}>
+            <Card sx={{ width:265}}>
               <CardActionArea>
-                <CardMedia component='img' height='' image={product.Image}  sx={{height:112}}/>
+                <CardMedia component='img' height='' image={product.Image}  sx={{height:185}}/>
                 <CardContent>
                   <Typography gutterBottom variant='h7' component='div'>
                     <b> {product.name}</b>

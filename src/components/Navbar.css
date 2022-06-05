@@ -60,9 +60,11 @@
 }
 
 .flex-container-2 {
-  margin-left: 0rem;
+  margin-left: 2rem;
   margin-top: 1rem;
-  margin-bottom: 6rem;
+  display: flexbox;
+
+  
 }
 
 .flex-container-2 > a {
@@ -83,7 +85,7 @@
   border-color: #2a2173;
   border-radius: 0.3em;
   text-decoration: none;
-  margin-left: 1px;
+  margin-left: 3rem;
   margin-top: 2px;
   text-shadow: 0 0 0, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff,
     0 0 100px #fff, 0 0 200px #fff, 0 0 300px #fff, 0 0 500px #fff,
@@ -179,7 +181,7 @@
   .navitems{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+   
   }
 
 
@@ -188,6 +190,7 @@
     background-color: white;
     margin-left: 8px;
     margin-right: 8px;
+   
   }
 
   .btnPostAd {
@@ -195,6 +198,8 @@
     text-shadow: none;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 2.6rem;
   }
 
   .btnPostAd:hover {
@@ -206,6 +211,13 @@
     display: block;
     text-align: center;
     margin-top: 30px;
+    margin-right: 2.5rem;
   }
+
+  .dropbtn{
+    width: 262%;
+    margin-top: -13px;
+  }
+
 
 }

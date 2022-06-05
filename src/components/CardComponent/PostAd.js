@@ -4,6 +4,7 @@ import { db, storage } from "../../firebase-config";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
+import { useForm } from "react-hook-form";
 import "./PostAd.css";
 
 const PostAd = () => {
@@ -36,8 +37,14 @@ const PostAd = () => {
 
   useEffect(() => {}, []);
 
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+
   return (
-    <div className="postContainer">
+    <form className="postContainer" onSubmit={handleSubmit(addProducts)}>
       <h1>Post an Ad</h1>
       <label>Name</label>
       <input
@@ -46,7 +53,11 @@ const PostAd = () => {
         onChange={(event) => {
           setProdName(event.target.value);
         }}
+        {...register("name", { required: true })}
       />
+      <label style={{ color: "red" }}>
+        {errors.name?.type === "required" && "Name is required"}
+      </label>
       <br />
       <label>Price</label>
       <input
@@ -55,7 +66,15 @@ const PostAd = () => {
         onChange={(event) => {
           setProdPrice(event.target.value);
         }}
+        {...register("price", {
+          required: true,
+          pattern: /^[0-9]+$/i,
+        })}
       />
+      <label style={{ color: "red" }}>
+        {errors.email?.type === "required" && "Price is required"}
+        {errors.email?.type === "pattern" && "Entered price is in wrong format"}
+      </label>
       <br />
       <br />
       <input
@@ -68,8 +87,10 @@ const PostAd = () => {
       <button onClick={addProdPic}>Upload Image</button>
       <br />
       <br />
-      <button onClick={addProducts}>Submit</button>
-    </div>
+      <button className="btnSubmit" type="submit">
+        Submit
+      </button>
+    </form>
   );
 };
 

@@ -1,4 +1,28 @@
 .postContainer{
-    padding: 20px;
-   
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.postContainer>input{
+    font-size: 15px;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 1px solid gray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.postContainer>label{
+    font-size: 20px;
+    color: gray;
+}
+
+.btnSubmit{
+    margin-bottom: 5rem;
 }
