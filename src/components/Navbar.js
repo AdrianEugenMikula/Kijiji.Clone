@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../logo1.png";
-import { TextField,InputAdornment } from "@mui/material";
+import { TextField, InputAdornment } from "@mui/material";
 import Box from "@mui/material/Box";
 import "./Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
@@ -9,8 +9,21 @@ import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 import { shadows } from "@mui/system";
 import { CenterFocusStrong } from "@mui/icons-material";
+import { auth } from "../firebase-config";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { async } from "@firebase/util";
 
 const Navbar = () => {
+  const [user, setUser] = useState("");
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const logout = async () => {
+    await signOut(auth);
+  };
+
   return (
     <nav className="flex-container">
       <Link href="/">
@@ -26,20 +39,22 @@ const Navbar = () => {
             maxWidth: "100%",
           }}
         >
-          <TextField fullWidth label="Search for anything..." id="fullWidth" 
-             InputProps={{
+          <TextField
+            fullWidth
+            label="Search for anything..."
+            id="fullWidth"
+            InputProps={{
               endAdornment: (
                 <InputAdornment>
                   <IconButton>
                     <SearchIcon />
                   </IconButton>
                 </InputAdornment>
-              )
+              ),
             }}
           />
         </Box>
       </div>
-     
 
       <div className="navitems">
         <div className="dropdown">
@@ -53,11 +68,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex-container-2">
-        <Link href="#">Register</Link>
+        <Link href="/register">Register</Link>
         <span>or</span>
-        <Link href="#">Sign In</Link>
-        <Box
-        >
+        <Link href="/login">Log In</Link>
+        {user ? <button onClick={logout}>Log Out</button> : <p></p>}
+        <Box>
           <button className="btnPostAd">
             <Link
               href="/post"
@@ -67,6 +82,7 @@ const Navbar = () => {
             </Link>
           </button>
         </Box>
+        <h4>{user ? <p>Hi {user.email}</p> : <p></p>}</h4>
       </div>
     </nav>
   );
