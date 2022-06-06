@@ -12,10 +12,15 @@ import {
 } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-const Login = () => {
+import { useNavigate } from "react-router-dom";
 
+const Login = () => {
   const [loginEmail, setEmailLogin] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [error, setError] = useState("");
+  let navigate = useNavigate();
+
+
 
   const logInUser = async () => {
     try {
@@ -24,14 +29,16 @@ const Login = () => {
         loginEmail,
         loginPassword
       );
+      navigate("/");
       console.log(user);
     } catch (error) {
       console.log(error.message);
+      setError(error.message);
     }
   };
   const paperStyle = {
     padding: 20,
-    height: "70vh",
+    height: "40vh",
     width: 280,
     margin: "20px auto",
   };
@@ -39,6 +46,7 @@ const Login = () => {
   const btnstyle = { margin: "8px 0", backgroundColor: "midnightBlue" };
   return (
     <Grid>
+      {error && <h2 style={{ color: "red", textAlign: "center" }}>{error}</h2>}
       <Paper elevation={10} style={paperStyle}>
         <Grid align="center">
           <Avatar style={avatarStyle} />

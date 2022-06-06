@@ -41,9 +41,6 @@ const Footer = () => {
           </ul>
           <div class="containerNeon">
             <p class="neon">
-              <br />
-              <br />
-              <br />
               DISCLAIMER <br />
               This is a personal project and has no affiliations with the real
               www.kijiji.ca <br />

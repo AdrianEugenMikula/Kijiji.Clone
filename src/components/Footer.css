@@ -1,5 +1,5 @@
 .footer {
-  background-color: #3E4153;
+  background-color: #3e4153;
   padding: 30px 0px;
   padding-bottom: 0px;
   margin: 0px;
@@ -7,13 +7,14 @@
   font-size: x-large;
   text-align: center;
   overflow: hidden;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .footer .row {
-  width: 100%;
-  height: 100%;
-  margin: 0% 0%;
-  padding: 2.6% 0%;
   color: #fff;
   font-size: 0.8em;
   text-align: center;
@@ -23,37 +24,30 @@
   text-decoration: none;
   color: #fff;
   transition: 0.5s;
+  
 }
 
 .footer .row a:hover {
   color: #fff;
-    text-shadow:
-      0 0 5px #EBEAF1,
-      0 0 10px #EBEAF1,
-      0 0 20px #EBEAF1,
-      0 0 40px #EBEAF1,
-      0 0 80px #EBEAF1,
-      0 0 90px #EBEAF1,
-      0 0 100px #EBEAF1,
-      0 0 150px #EBEAF1;
-      
+  text-shadow: 0 0 5px #ebeaf1, 0 0 10px #ebeaf1, 0 0 20px #ebeaf1,
+    0 0 40px #ebeaf1, 0 0 80px #ebeaf1, 0 0 90px #ebeaf1, 0 0 100px #ebeaf1,
+    0 0 150px #ebeaf1;
 }
 
 .footer .row ul {
   width: 100%;
-
- 
 }
 
 .footer .row ul li {
   display: inline-block;
   margin: 0px 30px;
-  
 }
 
 .footer .row a i {
   font-size: 2em;
   margin: 0% 1%;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 @media (max-width: 720px) {
@@ -68,10 +62,8 @@
   }
   .footer .row a i {
     margin: 0% 3%;
-    
   }
 }
-
 
 @media (max-width: 1200px) {
   .footer {
@@ -85,7 +77,6 @@
   }
   .footer .row a i {
     margin: 0% 3%;
-    
   }
 
   .footer .row a:hover {
@@ -93,4 +84,3 @@
     text-shadow: none;
   }
 }
-

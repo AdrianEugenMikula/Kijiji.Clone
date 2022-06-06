@@ -6,47 +6,48 @@ const NavMenu = () => {
       <div className="navdropdown">
         <button className="navdropbtn">Cars & Vehicles</button>
         <div className="navdropdown-content">
-          <a href="#">Truck</a>
-          <a href="#">SUV</a>
-          <a href="#">Sedan</a>
+          <a href="/vehicles">Truck</a>
+          <a href="/vehicles">SUV</a>
+          <a href="/vehicles">Sedan</a>
         </div>
       </div>
       <div className="navdropdown">
         <button className="navdropbtn">Real Estate</button>
         <div className="navdropdown-content">
-          <a href="#">For Rent</a>
-          <a href="#">For Sale</a>
+          <a href="/realestate">For Rent</a>
+          <a href="/realestate">For Sale</a>
         </div>
       </div>
       <div className="navdropdown">
         <button className="navdropbtn">Jobs</button>
         <div className="navdropdown-content">
-          <a href="#">For Rent</a>
-          <a href="#">For Sale</a>
+          <a href="/jobs">UI/UX developer</a>
+          <a href="/jobs">Backend Developer</a>
+          <a href="/jobs">FullStack Developer</a>
         </div>
       </div>
       <div className="navdropdown">
         <button className="navdropbtn">Services</button>
         <div className="navdropdown-content">
-          <a href="#">Entertainment</a>
-          <a href="#">ChildCare and Nanny</a>
-          <a href="#">Cleaners and Cleaning</a>
+          <a href="/services">Entertainment</a>
+          <a href="/services">ChildCare and Nanny</a>
+          <a href="/services">Cleaners and Cleaning</a>
         </div>
       </div>
       <div className="navdropdown">
-        <button className="navdropbtn">Services</button>
+        <button className="navdropbtn">Vacation Rentals</button>
         <div className="navdropdown-content">
-          <a href="#">Entertainment</a>
-          <a href="#">ChildCare and Nanny</a>
-          <a href="#">Cleaners and Cleaning</a>
+          <a href="/rentals">Canada</a>
+          <a href="/rentals">USA</a>
+          <a href="/rentals">Mexico</a>
         </div>
       </div>
       <div className="navdropdown">
         <button className="navdropbtn">Pets</button>
         <div className="navdropdown-content">
-          <a href="#">Animals and Pet Services</a>
-          <a href="#">Accessories</a>
-          <a href="#">Lost & Found</a>
+          <a href="/pets">Animals and Pet Services</a>
+          <a href="/pets">Accessories</a>
+          <a href="/pets">Lost & Found</a>
         </div>
       </div>
     </nav>

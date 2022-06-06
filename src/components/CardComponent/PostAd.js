@@ -3,23 +3,35 @@ import { useState, useEffect } from "react";
 import { db, storage } from "../../firebase-config";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
 import { v4 } from "uuid";
-import { useForm } from "react-hook-form";
 import "./PostAd.css";
+import { useNavigate } from "react-router-dom";
+import NavMenu from "../NavMenu";
 
 const PostAd = () => {
   const [addProdName, setProdName] = useState([]);
   const [addProdPrice, setProdPrice] = useState(0);
   const [uploadPic, setUploadPic] = useState(null);
   const [imgURL, setImgURL] = useState("");
+  const [selectedValue, setSelectedValue] = useState("");
+  const [error, setError] = useState("");
   const productsCollectionRef = collection(db, "products");
+  let navigate = useNavigate();
 
   const addProducts = async () => {
-    await addDoc(productsCollectionRef, {
-      name: addProdName,
-      Price: addProdPrice,
-      Image: imgURL,
-    });
+    try {
+      await addDoc(productsCollectionRef, {
+        name: addProdName,
+        Price: addProdPrice,
+        Image: imgURL,
+        Type: selectedValue,
+      });
+      alert("Ad Posted Sucessfully");
+    } catch (error) {
+      console.log(error.message);
+      setError(error.message);
+    }
   };
 
   const addProdPic = () => {
@@ -37,60 +49,59 @@ const PostAd = () => {
 
   useEffect(() => {}, []);
 
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
-
   return (
-    <form className="postContainer" onSubmit={handleSubmit(addProducts)}>
-      <h1>Post an Ad</h1>
-      <label>Name</label>
-      <input
-        placeholder="enter the name"
-        type="text"
-        onChange={(event) => {
-          setProdName(event.target.value);
-        }}
-        {...register("name", { required: true })}
-      />
-      <label style={{ color: "red" }}>
-        {errors.name?.type === "required" && "Name is required"}
-      </label>
-      <br />
-      <label>Price</label>
-      <input
-        placeholder="enter the price"
-        type="number"
-        onChange={(event) => {
-          setProdPrice(event.target.value);
-        }}
-        {...register("price", {
-          required: true,
-          pattern: /^[0-9]+$/i,
-        })}
-      />
-      <label style={{ color: "red" }}>
-        {errors.email?.type === "required" && "Price is required"}
-        {errors.email?.type === "pattern" && "Entered price is in wrong format"}
-      </label>
-      <br />
-      <br />
-      <input
-        type="file"
-        accept="image/*"
-        onChange={(event) => {
-          setUploadPic(event.target.files[0]);
-        }}
-      />
-      <button onClick={addProdPic}>Upload Image</button>
-      <br />
-      <br />
-      <button className="btnSubmit" type="submit">
-        Submit
-      </button>
-    </form>
+    <>
+    <NavMenu/>
+      <div className="postContainer">
+        {error && (
+          <h2 style={{ color: "red", textAlign: "center" }}>{error}</h2>
+        )}
+        <h1>Post an Ad</h1>
+        <label>Name</label>
+        <input
+          placeholder="enter the name"
+          type="text"
+          onChange={(event) => {
+            setProdName(event.target.value);
+          }}
+        />
+        <br />
+        <label>Price</label>
+        <input
+          placeholder="enter the price"
+          type="number"
+          onChange={(event) => {
+            setProdPrice(event.target.value);
+          }}
+        />
+        <br />
+        <br />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(event) => {
+            setUploadPic(event.target.files[0]);
+          }}
+        />
+        <button onClick={addProdPic}>Upload Image</button>
+        <br />
+        <br />
+        <select
+          id="selectedValue"
+          value={selectedValue}
+          onChange={(e) => setSelectedValue(e.target.value)}
+        >
+          <option value="Vehicles">Vehicles</option>
+          <option value="RealEstate">Real Estate</option>
+          <option value="Jobs">Jobs</option>
+          <option value="Services">Services</option>
+          <option value="VacationRentals">Vacation Rentals</option>
+          <option value="Pets">Pets</option>
+        </select>
+        <p>Ad Type: {selectedValue}</p>
+        <button onClick={addProducts}>Submit</button>
+      </div>
+    </>
   );
 };
 

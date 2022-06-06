@@ -73,14 +73,16 @@ const Navbar = () => {
         <Link href="/login">Log In</Link>
         {user ? <button onClick={logout}>Log Out</button> : <p></p>}
         <Box>
-          <button className="btnPostAd">
-            <Link
-              href="/post"
-              style={{ color: "#fff", textDecoration: "none" }}
-            >
-              Post Ad
-            </Link>
-          </button>
+          {user?
+           <button className="btnPostAd">
+           <Link
+             href="/post"
+             style={{ color: "#fff", textDecoration: "none" }}
+           >
+             Post Ad
+           </Link>
+         </button>: <p style={{fontWeight:"bold",color:"#373373"}}>Sign in to Post!</p>}
+         
         </Box>
         <h4>{user ? <p>Hi {user.email}</p> : <p></p>}</h4>
       </div>
